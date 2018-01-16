@@ -70,6 +70,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let inputB = Int(secondNumber["tens"]!)! * 10 + Int(secondNumber["ones"]!)!
             if inputA != nil {
                 model.addem(num1: inputA!, num2: inputB)
+                
+                self.view.endEditing(true) // this will hide the keyboard on submit
             }
         }
     }
@@ -77,6 +79,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func dataReady() {
         responseField.text = String(self.model.total!)
         self.responseField.reloadInputViews()
+    }
+    
+    // The next two functions allow a tap outside the keyboard area to dismiss the keyboard
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleSingleTap))
+        tapRecognizer.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+
+    @objc func handleSingleTap(recognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
 }

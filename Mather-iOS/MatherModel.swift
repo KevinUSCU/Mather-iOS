@@ -14,8 +14,8 @@ protocol MatherModelDelegate {
 }
 
 class MatherModel: NSObject {
-//    let API_URL = "http://127.0.0.1:3000/api"
-    let API_URL = "https://mather-server.herokuapp.com/api"
+    // let API_URL = "http://127.0.0.1:3000/api" // localhost
+    let API_URL = "https://mather-server.herokuapp.com/api" // heroku
     var total: Int? = nil
     var delegate: MatherModelDelegate?
     
