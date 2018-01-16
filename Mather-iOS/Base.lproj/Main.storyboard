@@ -57,7 +57,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-rt-85Q">
-                                <rect key="frame" x="20" y="123.5" width="335" height="216"/>
+                                <rect key="frame" x="20" y="113.5" width="335" height="216"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VS7-FG-ylX">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="216"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-pl-DHZ">
-                                <rect key="frame" x="20" y="384.5" width="335" height="40"/>
+                                <rect key="frame" x="20" y="339.5" width="335" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
                                 <state key="normal" title="Submit!!!"/>
@@ -85,7 +85,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YU-En-GsD">
-                                <rect key="frame" x="20" y="469.5" width="335" height="0.0"/>
+                                <rect key="frame" x="20" y="389.5" width="335" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,15 +95,15 @@
                         <constraints>
                             <constraint firstItem="QaT-9r-FVk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Ao-jP-PwP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xma-rt-85Q" secondAttribute="trailing" constant="20" id="4XH-it-ueX"/>
-                            <constraint firstItem="Xma-rt-85Q" firstAttribute="top" secondItem="yqd-J9-Cph" secondAttribute="bottom" constant="20" id="8aC-Zp-qHb"/>
+                            <constraint firstItem="Xma-rt-85Q" firstAttribute="top" secondItem="yqd-J9-Cph" secondAttribute="bottom" constant="10" id="8aC-Zp-qHb"/>
                             <constraint firstItem="uAT-pl-DHZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CGx-kM-FdT"/>
                             <constraint firstItem="QaT-9r-FVk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DNC-k3-TVk"/>
                             <constraint firstItem="Xma-rt-85Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Qz2-sF-pEI"/>
-                            <constraint firstItem="uAT-pl-DHZ" firstAttribute="top" secondItem="Xma-rt-85Q" secondAttribute="bottom" constant="45" id="RL7-je-nH3"/>
+                            <constraint firstItem="uAT-pl-DHZ" firstAttribute="top" secondItem="Xma-rt-85Q" secondAttribute="bottom" constant="10" id="RL7-je-nH3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yqd-J9-Cph" secondAttribute="trailing" constant="20" id="SfR-yc-zPe"/>
                             <constraint firstItem="QaT-9r-FVk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aFF-Eg-PJz"/>
                             <constraint firstItem="yqd-J9-Cph" firstAttribute="top" secondItem="QaT-9r-FVk" secondAttribute="bottom" constant="20" id="c8t-1w-RQz"/>
-                            <constraint firstItem="3YU-En-GsD" firstAttribute="top" secondItem="uAT-pl-DHZ" secondAttribute="bottom" constant="45" id="kjb-Q9-wmn"/>
+                            <constraint firstItem="3YU-En-GsD" firstAttribute="top" secondItem="uAT-pl-DHZ" secondAttribute="bottom" constant="10" id="kjb-Q9-wmn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3YU-En-GsD" secondAttribute="trailing" constant="20" id="lzd-Z5-BGc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uAT-pl-DHZ" secondAttribute="trailing" constant="20" id="tFd-ov-KQp"/>
                             <constraint firstItem="yqd-J9-Cph" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yxc-Oe-fYi"/>

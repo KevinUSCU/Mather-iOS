@@ -12,6 +12,7 @@
 		0AA4ADE9200D88440014F494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4ADE7200D88440014F494 /* Main.storyboard */; };
 		0AA4ADEB200D88440014F494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4ADEA200D88440014F494 /* Assets.xcassets */; };
 		0AA4ADEE200D88440014F494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4ADEC200D88440014F494 /* LaunchScreen.storyboard */; };
+		0AA4ADF8200DC7CD0014F494 /* MatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADF7200DC7CD0014F494 /* MatherModel.swift */; };
 		9B7F3178884DBDBCF6BD2FD4 /* Pods_Mather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CA119C41CDC1504844A801 /* Pods_Mather_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		0AA4ADEA200D88440014F494 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA4ADED200D88440014F494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AA4ADEF200D88440014F494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA4ADF7200DC7CD0014F494 /* MatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatherModel.swift; sourceTree = "<group>"; };
 		931B151841E543A0328EC89C /* Pods-Mather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mather-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mather-iOS/Pods-Mather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A1CA119C41CDC1504844A801 /* Pods_Mather_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mather_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F73BD4E774FAC54A47314E /* Pods-Mather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mather-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mather-iOS/Pods-Mather-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				0AA4ADE3200D88440014F494 /* AppDelegate.swift */,
 				0AA4ADE5200D88440014F494 /* ViewController.swift */,
+				0AA4ADF7200DC7CD0014F494 /* MatherModel.swift */,
 				0AA4ADE7200D88440014F494 /* Main.storyboard */,
 				0AA4ADEA200D88440014F494 /* Assets.xcassets */,
 				0AA4ADEC200D88440014F494 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			files = (
 				0AA4ADE6200D88440014F494 /* ViewController.swift in Sources */,
 				0AA4ADE4200D88440014F494 /* AppDelegate.swift in Sources */,
+				0AA4ADF8200DC7CD0014F494 /* MatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

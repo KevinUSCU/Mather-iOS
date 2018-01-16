@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, MatherModelDelegate {
     
     @IBOutlet weak var firstNumber: UITextField!
     
@@ -19,9 +19,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var responseField: UILabel!
     
+    let model: MatherModel = MatherModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.model.delegate = self
         
         self.secondNumberPicker.delegate = self
         self.secondNumberPicker.dataSource = self
@@ -64,9 +68,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if let firstInput = firstNumber.text {
             let inputA = Int(firstInput)
             let inputB = Int(secondNumber["tens"]!)! * 10 + Int(secondNumber["ones"]!)!
-            if inputA != nil { responseField.text = "\(inputA!), \(inputB)" }
-            else { responseField.text = "nope!" }
+            if inputA != nil {
+                model.addem(num1: inputA!, num2: inputB)
+            }
         }
+    }
+    
+    func dataReady() {
+        responseField.text = String(self.model.total!)
+        self.responseField.reloadInputViews()
     }
     
 }
