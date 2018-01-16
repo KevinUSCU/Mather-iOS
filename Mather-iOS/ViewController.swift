@@ -8,18 +8,66 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var firstNumber: UITextField!
+    
+    @IBOutlet weak var secondNumberPicker: UIPickerView!
+    
+    var numberPickerData: [[String]] = [[String]]()
+    var secondNumber: [ String: String ] = [ "tens": "1", "ones": "1" ]
+    
+    @IBOutlet weak var responseField: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.secondNumberPicker.delegate = self
+        self.secondNumberPicker.dataSource = self
+        
+        numberPickerData = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // The number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return numberPickerData[component].count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return numberPickerData[component][row]
+    }
 
-
+    // Capture the picker view selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+        if component == 0 {
+            secondNumber["tens"] = numberPickerData[component][row]
+        } else if component == 1 {
+            secondNumber["ones"] = numberPickerData[component][row]
+        }
+    }
+    
+    @IBAction func submitButton(_ sender: UIButton) {
+        if let firstInput = firstNumber.text {
+            let inputA = Int(firstInput)
+            let inputB = Int(secondNumber["tens"]!)! * 10 + Int(secondNumber["ones"]!)!
+            if inputA != nil { responseField.text = "\(inputA!), \(inputB)" }
+            else { responseField.text = "nope!" }
+        }
+    }
+    
 }
 
